@@ -9,14 +9,16 @@
 }
 
 body{
+    height:100vh;
+    width:100vw;
 }
 
 .main{
     display:grid;
     grid-template-columns: 1fr 8fr;
-    grid-template-rows: 1fr 7fr 1fr;
-    max-height:100%;
-    max-width:100%;
+    grid-template-rows: 1fr 10fr 1fr;
+    height:100vh;
+    width:100vw;
 }
 
 .sidebar{
@@ -44,17 +46,22 @@ body{
     align-items: center;
 }
 
+.header>.top>img{
+    height:2vh;
+}
+
 .header{
     grid-area: 1/2/2/3;
     background-color: white;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .header .top{
     display:grid;
     grid-template-columns: 1fr 6fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
 }
 
 .header .searchbar{
@@ -81,7 +88,6 @@ body{
     grid-row: 1/3;
     background-color: #ABC4AA;
     border-radius: 10px;
-    margin:30px 60px;
 }
 
 .content{
