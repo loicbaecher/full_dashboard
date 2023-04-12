@@ -51,54 +51,102 @@ body{
     align-items: center;
 }
 
-.header>.top>img{
-    height:2vh;
-}
-
 .header{
     grid-area: 1/2/2/3;
     background-color: white;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    position:relative;
+    box-shadow: 0px 2px 7px rgb(160, 157, 157);
+}
+
+.header form{
+    display:grid;
+}
+
+.header input{
+    justify-self:stretch;
 }
 
 .header .top{
     display:grid;
-    grid-template-columns: 1fr 6fr 1fr 1fr 2fr;
+    grid-template-columns: 0.5fr 8fr 1fr 1fr 2fr;
     grid-template-rows: 1fr;
+    align-items:center;
 }
 
-.header div .userimage{
+.header .top .notifications, .magni{
+    height:2vh;
+    width:2vh;
+}
+
+.header .magni{
+    justify-self: right;
+    padding-right: 0.75vw;
+}
+
+.header .notifications{
+    justify-self: right;
+    padding-right: 1vw;
+}
+
+.header .top .userimagetop img{
+    height:4vh;
+    width:4vh;
+}
+
+.header div .userimagebot, .userimagetop{
+    justify-self: center;
+    border-radius: 50px;
+    border-style: white;
+    padding:5px;
+}
+
+
+.header .bottom .userimagebot{
     grid-area: 1/1/3/2;
-    height:10vh;
-    width:10vh;
+    align-items: center;
+}
+
+.header .bottom .userimagebot img{
+    height:6vh;
+    width:6vh;
 }
 
 .header .searchbar{
     background-color: #F3DEBA;
     border-radius: 10px;
-    margin:5px;
+    border: none;
+    height:3vh;
+    padding-left: 10px;
+}
+
+.header .searchbar:focus{
+    border:none;
+    outline:none;
+    background:#c2b193;
 }
 
 .header .bottom{
     display:grid;
     grid-template-rows: 1fr 2fr;
-    grid-template-columns:1fr 4fr 2fr 2fr 2fr
-}
-
-.header .bottom .userimage{
-    grid-row: 1/3;
+    grid-template-columns:1fr 7fr 1fr 1fr 1fr 0.50fr;
+    align-items:center;
 }
 
 .header .bottom .username{
     grid-area: 2/2/3/3 
 }
 
-.header button{
+.header .bottom button{
     grid-row: 1/3;
     background-color: #ABC4AA;
     border-radius: 10px;
+    width:6vw;
+    height:3vh;
+    justify-self: center;
+    border: none;
 }
 
 .content{
@@ -126,6 +174,8 @@ body{
     background-color: white;
     border-radius: 10px;
     border-left: solid 7px #A9907E;
+    position:relative;
+    box-shadow: 0px 2px 7px rgb(160, 157, 157);
 }
 
 .card .title{
